@@ -2,17 +2,20 @@ import React, { Component } from 'react';
 import Parent from './Parent';
 import './style.css';
 
-const Card = ()=> {
+const Card = ({users})=> {
   return(
-   <div style={{display:'flex'}}>
+ users.map((user,id)=>{
+   return(
+  <div style={{display:'flex'}}>
   <div>
-   <img src = "./Assets/download.png"/>
+   <img style={{width:'80px',height:'100px',margin:'10px'}}src = "https://www.callsprout.com/wp-content/uploads/2016/05/portrait-placeholder-510x315.jpg"/>
   </div>
   <div>
-  <h4>Name here</h4>
-  <h4>Company here</h4>
+  <h4>{user.name}</h4>
+  <h4 style={{marginLeft:'20px'}}>{user.website}</h4>
   </div>
-  </div>
+  </div>)
+ })
   )
 }
 export default Card;

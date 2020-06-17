@@ -1,10 +1,21 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import axios from 'axios';
 import './style.css';
 
 export default class App extends Component {
-  constructor() {
-    super();
+  componentDidMount(){
+    axios.get("https://jsonplaceholder.typicode.com/users").then(
+      (res)=>{
+        console.log(res.data,'res.data')
+        this.setState({users:res.data})
+      }
+    )
+
+  }
+  constructor(props) {
+    super(props);
+    this.state = {users :[]}
 
   }
 
@@ -12,7 +23,7 @@ export default class App extends Component {
     return (
       <div style={{textAlign : 'center'}}>
        <h2>The Github Cards App</h2>
-       <Card/>
+       <Card users ={this.state.users}/>
       </div>
     );
   }
