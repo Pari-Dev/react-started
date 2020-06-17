@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Hello from './Hello';
+import Card from './Card';
 import './style.css';
 
 export default class App extends Component {
@@ -12,6 +12,7 @@ export default class App extends Component {
     return (
       <div style={{textAlign : 'center'}}>
        <h2>The Github Cards App</h2>
+       <Card/>
       </div>
     );
   }
