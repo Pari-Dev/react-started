@@ -10,7 +10,7 @@ const Card = ({users})=> {
   return(
  users.map((user,id)=>{
    return(
-  <div style={{display:'flex'}}>
+  <div style={{display:'flex'}} key={id}>
   <div>
    <img style={{width:'80px',height:'100px',margin:'10px'}}src = "https://www.callsprout.com/wp-content/uploads/2016/05/portrait-placeholder-510x315.jpg"/>
   </div>
