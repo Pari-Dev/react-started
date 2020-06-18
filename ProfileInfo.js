@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-export const ProfileInfo = (props) =>{
+ const ProfileInfo = (props) =>{
   console.log(props,'props')
   return <div>Pranita</div>
 }
+export default ProfileInfo;

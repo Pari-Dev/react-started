@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from './Card';
 import axios from 'axios';
+import ProfileInfo from ' ./ProfileInfo'
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import routes from './Router'
 import './style.css';
@@ -30,13 +31,9 @@ export default class App extends Component {
        <BrowserRouter>
           <div>
             <Switch>
-              <Route
-                path="/mountain"
-                render={() => <Item searchTerm="mountain" />}
-              />
-              <Route path="/beach" render={() => <Item searchTerm="beach" />} />
-              <Route path="/bird" render={() => <Item searchTerm="bird" />} />
-              <Route path="/card" render={() => < Card users={this.state.users}/>} />
+              <Route 
+               component={ProfileInfo}/>
+              <Route path="/card" render={() => <Card users={this.state.users}/>} />
             </Switch>
           </div>
         </BrowserRouter>
