@@ -3,6 +3,7 @@ import Parent from './Parent';
 import routes from ' ./Router'
 import profileInfo from './ProfileInfo';
 import './style.css';
+import {Link} from 'react-router-dom';
 
 
 const Card = ({users})=> {
@@ -14,7 +15,7 @@ const Card = ({users})=> {
    <img style={{width:'80px',height:'100px',margin:'10px'}}src = "https://www.callsprout.com/wp-content/uploads/2016/05/portrait-placeholder-510x315.jpg"/>
   </div>
   <div>
-  <h4>{user.name}</h4>
+  < Link to= '/ProfileInfo'><h4>{user.name}</h4></Link>
   <h4 style={{marginLeft:'20px'}}>{user.website}</h4>
   </div>
 
