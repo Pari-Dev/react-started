@@ -23,10 +23,23 @@ export default class App extends Component {
 
   render() {
     return (
-      <div style={{textAlign : 'center'}}>
-       <h2>The Github Cards App</h2>
-       <Card users ={this.state.users}/>
-      </div>
+      // <div style={{textAlign : 'center'}}>
+      //  <h2>The Github Cards App</h2>
+      //  <Card users ={this.state.users}/>
+      // </div>
+       <BrowserRouter>
+          <div>
+            <Switch>
+              <Route
+                path="/mountain"
+                render={() => <Item searchTerm="mountain" />}
+              />
+              <Route path="/beach" render={() => <Item searchTerm="beach" />} />
+              <Route path="/bird" render={() => <Item searchTerm="bird" />} />
+              <Route path="/card" render={() => < Card users={this.state.users}/>} />
+            </Switch>
+          </div>
+        </BrowserRouter>
     );
   }
 }
