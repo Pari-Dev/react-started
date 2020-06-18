@@ -31,9 +31,8 @@ export default class App extends Component {
        <BrowserRouter>
           <div>
             <Switch>
-              <Route 
-               component={ProfileInfo}/>
-              <Route path="/card" render={() => <Card users={this.state.users}/>} />
+              // <Route path='/' component={ProfileInfo}/>
+              <Route path='/'  render={() => <Card users={this.state.users}/>} />
             </Switch>
           </div>
         </BrowserRouter>
