@@ -1,22 +1,19 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
-import Parent from './Parent';
-import ProfileInfo from './ProfileInfo';
-import './style.css';
-import {BrowserRouter,Route} from 'react-router-dom';
+import React, { Component } from "react";
+import { render } from "react-dom";
+import Parent from "./Parent";
+import ProfileInfo from "./ProfileInfo";
+import "./style.css";
+import { BrowserRouter, Route,Switch } from "react-router-dom";
 
-const App = ()=> {
-  return(
-  <div>
-  <Parent/>
-  </div>
-  )
-}
+const App = () => {
+  return (
+    <BrowserRouter>
+    <Switch>
+      <Route component={Parent}/>
+      <Route path="/ProfileInfo" component={ProfileInfo}/>
+    </Switch>
+    </BrowserRouter>
+  );
+};
 
-render(
-  <BrowserRouter>
-  <div>
-  <Route component={App}/>
-  <Route path='/profileInfo' component={ProfileInfo}/>
-  </div>
-  </BrowserRouter>, document.getElementById('root'));
+render(<App/>, document.getElementById("root"));
