@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Parent from './Parent';
+import routes from ' ./Router'
 import profileInfo from './ProfileInfo';
 import './style.css';
+
 
 const Card = ({users})=> {
   return(

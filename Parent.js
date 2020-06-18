@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Card from './Card';
 import axios from 'axios';
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import routes from './Router'
 import './style.css';
 
 export default class App extends Component {
